@@ -17,22 +17,22 @@ const App = () => {
   return (
     <div>
     
-    <div>
+    <div className="all-buttons">
         {Categories.map( (oneCategory, index) => {
           return <div>
-            <button key={index} onClick={ () => setTypeOfMovie(oneCategory)}>
+            <button className="one-button" key={index} onClick={ () => setTypeOfMovie(oneCategory)}>
             {oneCategory}
             </button>
           </div>
         } )}
     </div>
     
-    <div>
+    <div className="all-movies">
       {finalMovie.map( (oneMovie)=> {
         const {id, image, title, age, tags, description} = oneMovie
 
         return (
-          <div key={id}>
+          <div key={id} className="one-movie">
             <img src={image} alt=""></img>
             <h2>{title}</h2>
             <p>{age}</p>
